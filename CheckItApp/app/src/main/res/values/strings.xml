@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CheckItApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="main_label">Check It</string>
+    <string name="action_text1">Protecting brands and consumers.</string>
+    <string name="verify">Verify</string>
+    <string name="scan">Scan Code</string>
+    <string name="swipe">Swipe screen to learn more \n Sign In/Sign Up</string>
+    <string name="know">Did You Know?</string>
+    <string name="tip1">The global counterfeiting or piracy of goods is estimated to be between
+         estimates of $455 to $650 billion as at 2008 and there is only 10% probability
+         for a person to differentiate between a fake and a genuine product </string>
+    <string name="tip2">In Africa and some parts of South America, there is about 35% probability
+    of buying a fake drug</string>
+    <string name="title_activity_response_1">Response_1</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="signup">Sign Up</string>
+    <string name="title_activity_main">Check It</string>
+    <string name="title_section1">Verify Drug</string>
+    <string name="title_section2">Find a Pharmacy</string>
+    <string name="title_section3">Get Health Tips</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="tag_text">Swipe screen to learn more</string>
+    <string name="signup_link_text">Sign up</string>
+
+    <string-array name="navigation">
+        <item>Verify Drug</item>
+        <item>Find a Pharmacy</item>
+        <item>Get Health Tips</item>
+        <item>Health News</item>
+        <item>Feedback</item>
+    </string-array>
+
+    <string name="title_activity_find_pharmacy">FindPharmacyActivity</string>
+
+</resources>
