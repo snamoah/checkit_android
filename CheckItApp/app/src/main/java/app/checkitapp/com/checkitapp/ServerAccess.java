@@ -37,20 +37,21 @@ public class ServerAccess {
 
 //                   display.setText(response.getString("message"));
 
-                    AlertDialog.Builder ab = new AlertDialog.Builder(activity);
-                    ab
-                            .setTitle(response.getString("title"))
-                            .setMessage(response.getString("message"))
-                            .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    dialogInterface.cancel();
-                                }
-                            });
+                    if(response.getString("status") == "501") {
+                        AlertDialog.Builder ab = new AlertDialog.Builder(activity);
+                        ab
+                                .setTitle(response.getString("title"))
+                                .setMessage(response.getString("message"))
+                                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        dialogInterface.cancel();
+                                    }
+                                });
 
-                    AlertDialog ad = ab.create();
-                    ad.show();
-
+                        AlertDialog ad = ab.create();
+                        ad.show();
+                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Toast.makeText(activity, "There was a problem parsing the JSON.", Toast.LENGTH_SHORT).show();

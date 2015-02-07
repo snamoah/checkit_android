@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/verify_layout_logged_in"
+    android:layout_below="@+id/imageView1"
+    android:layout_centerHorizontal="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/action_text1"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white_grey"
+        android:id="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:minWidth="300dp"
+        android:id="@+id/codeBox"
+        android:layout_gravity="center|top"
+        android:inputType="number"
+        android:imeOptions="actionDone"
+        android:gravity="center"
+        android:hint="Type your code here"
+        android:background="@drawable/txtbox"
+        android:singleLine="true"
+        android:padding="5dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="@string/verify"
+        android:textColor="@color/white_grey"
+        android:background="@drawable/button_state"
+        android:id="@+id/button1"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/codeBox"
+        android:gravity="center"/>
+
+    <ImageButton
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageButton"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/scan"
+        android:layout_below="@+id/button1"/>
+
+</RelativeLayout >

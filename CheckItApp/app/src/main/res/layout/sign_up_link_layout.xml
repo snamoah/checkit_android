@@ -17,6 +17,7 @@
         android:textSize="15dp"
         android:layout_marginLeft="10dp"
         android:layout_toRightOf="@id/tag_text"
+        android:id="@+id/signup_link"
         android:text="@string/signup_link_text"/>
 
 </RelativeLayout>

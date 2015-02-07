@@ -29,10 +29,6 @@ public class MainActivityFragmentOne extends Fragment {
         View rootView = inflater.inflate(R.layout.activity_main_fragment_one, container, false);
 
         code = (EditText) rootView.findViewById(R.id.codeBox);
-        RelativeLayout rl = (RelativeLayout) rootView.findViewById(R.id.tag_line_text);
-        rl.setVisibility(View.GONE);
-        TextView tv = (TextView) rootView.findViewById(R.id.main_label);
-        tv.setVisibility(View.INVISIBLE);
         Button b = (Button) rootView.findViewById(R.id.button1);
         b.setOnClickListener(new View.OnClickListener() {
             @Override

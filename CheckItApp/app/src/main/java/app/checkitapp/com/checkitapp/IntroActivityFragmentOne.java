@@ -71,6 +71,14 @@ public class IntroActivityFragmentOne extends Fragment {
                 ServerAccess.request(fo.getActivity(), code_box.getText().toString());
             }
         });
+
+        TextView signup = (TextView) rootView.findViewById(R.id.signup_link);
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fo.getActivity().getSupportFragmentManager().beginTransaction().add(R.id.pager, new IntroActivityFragmentFour()).commit();
+            }
+        });
         return rootView;
     }
 
