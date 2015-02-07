@@ -16,4 +16,8 @@
         <item name="background">@color/checkit_blue</item>
         <item name="icon">@drawable/logo1</item>
     </style>
+
+    <style name="DialogTheme" parent="Base.Theme.AppCompat.Light.Dialog">
+        <item name="android:background">@color/dialog_background</item>
+    </style>
 </resources>

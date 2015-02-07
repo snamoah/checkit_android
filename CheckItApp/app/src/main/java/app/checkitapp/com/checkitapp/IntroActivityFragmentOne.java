@@ -76,7 +76,10 @@ public class IntroActivityFragmentOne extends Fragment {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                fo.getActivity().getSupportFragmentManager().beginTransaction().add(R.id.pager, new IntroActivityFragmentFour()).commit();
+                fo.getActivity().getSupportFragmentManager()
+                        .beginTransaction().add(R.id.pager, new IntroActivityFragmentFour())
+                        .addToBackStack(null)
+                        .commit();
             }
         });
         return rootView;

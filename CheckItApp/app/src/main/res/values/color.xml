@@ -4,6 +4,7 @@
     <color name="grey">#7A7A7A</color>
     <color name="white_grey">#EBEBEB</color>
     <color name="background">#0044AA</color>
+    <color name="dialog_background">#b3000a4d</color>
     <color name="bluelight">#449DEF</color>
     <color name="bluedark">#2F6699</color>
     <color name="blueink">#0077A7</color>

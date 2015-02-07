@@ -1,6 +1,7 @@
 package app.checkitapp.com.checkitapp;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.ActionBarActivity;
@@ -35,23 +36,36 @@ public class ServerAccess {
 
                 try{
 
-//                   display.setText(response.getString("message"));
+                   //display.setText(response.getString("message"));
 
-                    if(response.getString("status") == "501") {
-                        AlertDialog.Builder ab = new AlertDialog.Builder(activity);
-                        ab
-                                .setTitle(response.getString("title"))
-                                .setMessage(response.getString("message"))
-                                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialogInterface, int i) {
-                                        dialogInterface.cancel();
-                                    }
-                                });
+                    if(response.getString("status").equals("501")) {
+//                        AlertDialog.Builder ab = new AlertDialog.Builder(activity);
+//                        ab
+//                                .setTitle(response.getString("title"))
+//                                .setMessage(response.getString("message"))
+//                                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+//                                    @Override
+//                                    public void onClick(DialogInterface dialogInterface, int i) {
+//                                        dialogInterface.cancel();
+//                                    }
+//                                });
+//
+//                        AlertDialog ad = ab.create();
+//                        ad.show();
 
-                        AlertDialog ad = ab.create();
-                        ad.show();
+                        Dialog d = new Dialog(activity);
+                        d.setContentView(R.layout.genuine_drug_layout);
+                        d.show();
+
+                    } else if(response.getString("status").equals("502")) {
+                        Dialog d = new Dialog(activity);
+                        d.setContentView(R.layout.fake_drug_layout);
+                        d.show();
+                    } else {
+                        Toast.makeText(activity, "Code has already been used.", Toast.LENGTH_SHORT).show();
                     }
+
+                    Toast.makeText(activity, response.getString("status"), Toast.LENGTH_LONG).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Toast.makeText(activity, "There was a problem parsing the JSON.", Toast.LENGTH_SHORT).show();
